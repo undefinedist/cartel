@@ -1,0 +1,15 @@
+# start dev server
+gatsby develop
+
+# branch
+master
+feature -> on progress feature development
+
+<partner>_prod -> partner deployed webpage with static data
+<partner>_dev -> partner with only changing data from contentful -> static data
+<partner>_feature -> partner adding new web component or feature
+
+# web component
+update sicrio_web version
+export to src/componets/sicario
+check if anything is broken
