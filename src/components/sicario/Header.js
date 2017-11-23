@@ -1,5 +1,4 @@
 import React from 'react'
-import Fixed from './Fixed'
 import Box from './Box'
 import Flex from './Flex'
 import ButtonCircle from './ButtonCircle'
