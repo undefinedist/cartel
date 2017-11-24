@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "oiojin831",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "gatsby": "latest",
     "gatsby-link": "latest",
     "gatsby-plugin-react-helmet": "^1.0.8",

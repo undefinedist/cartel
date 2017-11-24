@@ -1,5 +1,8 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
+    partner: process.env.PARTNER,
     header: {
       color: `blue`,
       button: `world`,
@@ -11,8 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `fmalotl17hvn`,
-        accessToken: `4659339626f3e1a82ac104382b1db91cba987faeec24040274a163b68e95f289`,
+        spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
       },
     },
   ],

@@ -6,7 +6,6 @@ import ReactDisqusThread from 'react-disqus-thread'
 
 const IndexPage = ({data}) => {
   const header = data.allContentfulPartner.edges[0].node.header
-  console.log(header)
 
   return (
     <div>
@@ -36,7 +35,7 @@ const IndexPage = ({data}) => {
       </Fixed>
       <ReactDisqusThread
         style={{marginTop: '100px'}}
-        shortname="skywings"
+        shortname={data.site.siteMetadata.partner}
         title="Example Thread"
       />
     </div>
@@ -46,7 +45,12 @@ const IndexPage = ({data}) => {
 export default IndexPage
 
 export const query = graphql`
-  query AboutQuery {
+  query allContentfulPartner {
+    site {
+      siteMetadata {
+        partner
+      }
+    }
     allContentfulPartner(filter: {name: {eq: "skywings"}}) {
       edges {
         node {
