@@ -421,7 +421,8 @@
         "Box",
         "Flex",
         "ButtonCircle",
-        "Logo"
+        "Logo",
+        "Fixed"
       ],
       "jsx": "  <Flex\n    justify='space-between'\n    align='center'\n    bg={props.bg}\n    >\n    <Box {...props.logoWrapper}>\n      <Logo px={props.logoPx} src={props.src} />\n    </Box>\n    <Box {...props.btnWrapper}>\n      <ButtonCircle {...props.btn}>{props.text}</ButtonCircle>\n    </Box>\n  </Flex>",
       "examples": [

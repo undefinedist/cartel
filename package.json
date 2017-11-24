@@ -9,6 +9,7 @@
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.2",
     "gatsby-source-contentful": "latest",
+    "react-disqus-thread": "^0.4.0",
     "sicario_web": "^0.1.2",
     "styled-components": "^2.2.3",
     "styled-system": "^1.0.8"
