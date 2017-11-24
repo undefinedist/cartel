@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "author": "oiojin831",
   "dependencies": {
-    "gatsby": "^1.9.119",
-    "gatsby-link": "^1.6.28",
+    "gatsby": "latest",
+    "gatsby-link": "latest",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-styled-components": "^2.0.2",
+    "gatsby-source-contentful": "latest",
     "sicario_web": "^0.1.2",
     "styled-components": "^2.2.3",
     "styled-system": "^1.0.8"

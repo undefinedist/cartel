@@ -423,9 +423,9 @@
         "ButtonCircle",
         "Logo"
       ],
-      "jsx": "  <Flex\n    justify='space-between'\n    align='center'\n    bg={props.bg}\n    >\n    <Box {...props.logoWrapper}>\n      <Logo px={props.logoPx} src={props.src} />\n    </Box>\n    <Box {...props.btnWrapper}>\n      <ButtonCircle {...props.btn}>btn</ButtonCircle>\n    </Box>\n  </Flex>",
+      "jsx": "  <Flex\n    justify='space-between'\n    align='center'\n    bg={props.bg}\n    >\n    <Box {...props.logoWrapper}>\n      <Logo px={props.logoPx} src={props.src} />\n    </Box>\n    <Box {...props.btnWrapper}>\n      <ButtonCircle {...props.btn}>{props.text}</ButtonCircle>\n    </Box>\n  </Flex>",
       "examples": [
-        "<Header\n  bg='red'\n  text='hello'\n  logoPx={[5]}\n  src='https://dummyimage.com/300x82/000/fff.png&text=UNDEF'\n  logoWrapper={\n    {\n      px: [1,1,1,2],\n      py: [1,1,1,1]\n    }\n  }\n  btnWrapper={\n    {\n      px: [1,1,1,2],\n      py: [1,1,1,1]\n    }\n  }\n  btn={\n    {\n      fontSize:[1],\n      color: 'white',\n      bg: 'green',\n      px: [5]\n    }\n  }\n>\n  hello\n</Header>"
+        "<Header\n  bg='red'\n  text='hello'\n  logoPx={[5]}\n  src='https://dummyimage.com/300x82/000/fff.png&text=UNDEF'\n  logoWrapper={\n    {\n      px: [1,1,1,2],\n      py: [1,1,1,1]\n    }\n  }\n  btnWrapper={\n    {\n      px: [1,1,1,2],\n      py: [1,1,1,1]\n    }\n  }\n  btn={\n    {\n      fontSize:[1],\n      color: 'white',\n      bg: 'green',\n      px: [5]\n    }\n  } />"
       ],
       "system": []
     },

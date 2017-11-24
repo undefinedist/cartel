@@ -10,7 +10,7 @@ const Header = props => (
       <Logo px={props.logoPx} src={props.src} />
     </Box>
     <Box {...props.btnWrapper}>
-      <ButtonCircle {...props.btn}>btn</ButtonCircle>
+      <ButtonCircle {...props.btn}>{props.text}</ButtonCircle>
     </Box>
   </Flex>
 )
