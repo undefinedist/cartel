@@ -2,7 +2,6 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    partner: process.env.PARTNER,
     header: {
       color: `blue`,
       button: `world`,

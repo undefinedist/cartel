@@ -3,9 +3,12 @@ import Link from 'gatsby-link'
 import Header from '../components/sicario/Header'
 import Fixed from '../components/sicario/Fixed'
 import ReactDisqusThread from 'react-disqus-thread'
+const partner = process.env.GATSBY_PARTNER
 
-const IndexPage = ({data}) => {
-  const header = data.allContentfulPartner.edges[0].node.header
+const IndexPage = props => {
+  console.log('propssssss', props)
+
+  const header = props.data.allContentfulPartner.edges[0].node.header
 
   return (
     <div>
@@ -35,7 +38,7 @@ const IndexPage = ({data}) => {
       </Fixed>
       <ReactDisqusThread
         style={{marginTop: '100px'}}
-        shortname={data.site.siteMetadata.partner}
+        shortname={partner}
         title="Example Thread"
       />
     </div>
@@ -45,13 +48,8 @@ const IndexPage = ({data}) => {
 export default IndexPage
 
 export const query = graphql`
-  query allContentfulPartner {
-    site {
-      siteMetadata {
-        partner
-      }
-    }
-    allContentfulPartner(filter: {name: {eq: "skywings"}}) {
+  query allContentfulPartner($partner: String!) {
+    allContentfulPartner(filter: {name: {eq: $partner}}) {
       edges {
         node {
           id

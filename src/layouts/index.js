@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import {ThemeProvider} from 'styled-components'
 import theme from '../../theme.json'
 
-const TemplateWrapper = ({children}) => (
+const TemplateWrapper = props => (
   <div>
     <Helmet
       title="Gatsby Default Starter"
@@ -14,7 +14,9 @@ const TemplateWrapper = ({children}) => (
         {name: 'keywords', content: 'sample, something'},
       ]}
     />
-    <ThemeProvider theme={theme}>{children()}</ThemeProvider>
+    <ThemeProvider theme={theme}>
+      {props.children({...props, aa: 'bb'})}
+    </ThemeProvider>
   </div>
 )
 
