@@ -6,34 +6,18 @@ import ReactDisqusThread from 'react-disqus-thread'
 const partner = process.env.GATSBY_PARTNER
 
 const IndexPage = props => {
-  console.log('propssssss', props)
-
   const header = props.data.allContentfulPartner.edges[0].node.header
-
   return (
     <div>
       <Fixed top right left z={100}>
         <Header
           bg="blue"
-          text="예약하기"
+          text={header.btnText}
           logoPx={[5]}
-          src={`https://dummyimage.com/300x82/000/fff.png&text=${
-            header.companyName
-          }`}
-          logoWrapper={{
-            px: [1, 1, 1, 2],
-            py: [2, 2, 2, 1],
-          }}
-          btnWrapper={{
-            px: [1, 1, 1, 2],
-            py: [1, 1, 1, 1],
-          }}
-          btn={{
-            fontSize: [1],
-            color: header.btnColor,
-            bg: header.btnBg,
-            px: header.btnPx,
-          }}
+          src={header.logo.file.url}
+          logoWrapper={header.logoWrapper}
+          btnWrapper={header.btnWrapper}
+          btn={header.btn}
         />
       </Fixed>
       <ReactDisqusThread
@@ -55,10 +39,28 @@ export const query = graphql`
           id
           name
           header {
+            bg
+            btnText
             companyName
-            btnColor
-            btnBg
-            btnPx
+            logoWrapper {
+              px
+              py
+            }
+            btnWrapper {
+              px
+              py
+            }
+            logo {
+              file {
+                url
+              }
+            }
+            btn {
+              bg
+              px
+              color
+              fontSize
+            }
           }
         }
       }

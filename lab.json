@@ -441,10 +441,10 @@
         "minHeight": "80vh",
         "backgroundSize": "cover",
         "backgroundPosition": "center",
-        "backgroundImage": "${props.src}"
+        "backgroundImage": "url(${props.backgroundImage})"
       },
       "examples": [
-        "<Banner src='https://mrmrs.github.io/photos/u/007.jpg'>hello</Banner>"
+        "<Banner backgroundImage='https://mrmrs.github.io/photos/u/007.jpg'>heldddlo</Banner>"
       ],
       "system": []
     },
@@ -508,6 +508,17 @@
         "<PreMultilineText lineHeight=\"5\"> \n  {\"hello\\nfjfjfdffa\"}\n</PreMultilineText>"
       ],
       "system": []
+    },
+    {
+      "name": "Hero",
+      "imports": [
+        "Banner",
+        "PreMultilineText"
+      ],
+      "jsx": "<Banner backgroundImage={backgroundImage} style={{alignItems}} px={px}>\n  <PreMultiLineText multiLineText={titleText} {...title} />\n  <PreMultiLineText multiLineText={descriptionText} {...description} />\n</Banner>",
+      "examples": [
+        "<Hero />"
+      ]
     }
   ]
 }

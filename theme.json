@@ -24,6 +24,7 @@
   ],
   "colors": {
     "black": "#000",
-    "blue": "#07c"
+    "blue": "#07c",
+    "main": "#ea9a4c"
   }
 }
